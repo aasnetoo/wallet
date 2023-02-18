@@ -1,4 +1,4 @@
-package entity;
+package com.wallet.entity;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
@@ -12,13 +12,13 @@ import java.io.Serializable;
 @Setter
 @EqualsAndHashCode
 @Entity
-public class User implements Serializable {
+public class UserEntity implements Serializable {
 
     private static final long serialVersionUID = 1693850165739564098L;
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(nullable = false)
     private String name;
