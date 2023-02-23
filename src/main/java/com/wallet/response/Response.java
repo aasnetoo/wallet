@@ -17,6 +17,7 @@ public class Response<T> {
     private T data; //resposta do upload, um wallet, um user -- SUCESSO NO DATA, ERRO NA LISTA DE ERRORS.
     private List<String> errors; //Qualquer erro que ocorra vamos colocar dentro de errors
 
+
     public List<String> getErrors(){
         if (this.errors == null){
             this.errors = new ArrayList<>();

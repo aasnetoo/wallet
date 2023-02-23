@@ -23,7 +23,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<Response<UserDTO>> createUser(@Validated @RequestBody UserDTO userDTO, BindingResult result){
 
-        Response<UserDTO> response = new Response<UserDTO>();
+        Response<UserDTO> response = new Response<>();
         if (result.hasErrors()){
             result.getAllErrors().forEach(e -> response.getErrors().add(e.getDefaultMessage()));
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
